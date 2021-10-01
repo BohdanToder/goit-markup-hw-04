@@ -159,7 +159,7 @@ img {
 	margin-right: auto;
 
 	background-color: var(--second-background-color);
-	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -306,6 +306,36 @@ img {
 	line-height: 1.19;
 	text-align: center;
 	color: var(--secondary-text-color);
+}
+
+/* Постоянные клиенты */
+.client-title {
+	margin-bottom: 50px;
+
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.17;
+	text-align: center;
+}
+
+.client-list {
+	display: flex;
+}
+
+.client-item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.client-link {
+	outline: 1px solid red;
+
+	/* display: inline-block; */
+
+	flex-basis: calc(100% / 6 - 150px);
+	padding: 16px 32px;
+
+	/* width: 170px;
+	height: 92px; */
 }
 
 /* ------------Футер------------*/
