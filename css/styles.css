@@ -154,6 +154,7 @@ img {
 /* Герой */
 .hero {
 	max-width: 1600px;
+	min-width: 1200px;
 	height: 600px;
 	margin-left: auto;
 	margin-right: auto;
