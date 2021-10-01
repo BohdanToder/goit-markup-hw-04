@@ -57,17 +57,33 @@ img {
 
 .container {
 	width: 1200px;
-	margin: 0 auto;
-	padding: 0 15;
-
-	outline: 1px solid tomato;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 .section {
-	padding: 94 0;
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
 }
 
 /* ------------Хедер------------ */
+.header {
+	border-bottom: 1px solid #ececec;
+}
+
 .header-content {
 	display: flex;
 	align-items: center;
@@ -160,7 +176,6 @@ img {
 	min-width: 200px;
 	padding: 10px 32px;
 	border-radius: 4px;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
 	font-family: inherit;
 	font-weight: 700;
@@ -177,7 +192,22 @@ img {
 }
 
 /* Особенности работы */
+
+.features-list {
+	display: flex;
+}
+
+.features-item {
+	flex-basis: calc((100% - 90px) / 4);
+}
+
+.features-item:not(:last-child) {
+	margin-right: 30px;
+}
+
 .features-item-title {
+	margin-bottom: 10px;
+
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 1.14;
@@ -191,6 +221,26 @@ img {
 }
 
 /* Чем мы занимаемся */
+
+.speciality {
+	padding-top: 0;
+}
+
+.speciality-title {
+	margin-bottom: 50px;
+}
+
+.speciality-list {
+	display: flex;
+}
+.speciality-item {
+	flex-basis: calc((100% - 60px) / 3);
+}
+
+.speciality-item:not(:last-child) {
+	margin-right: 30px;
+}
+
 .speciality-title {
 	font-weight: 700;
 	font-size: 36px;
@@ -203,18 +253,39 @@ img {
 	background-color: var(--third-background-color);
 }
 
+.members-list {
+	display: flex;
+}
+
 .members-item {
+	flex-basis: calc((100% - 90px) / 4);
+	border-radius: 0px 0px 4px 4px;
+
 	background-color: var(--primary-background-color);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.members-item:not(:last-child) {
+	margin-right: 30px;
 }
 
 .members-title {
+	margin-bottom: 50px;
+
 	font-weight: 700;
 	font-size: 36px;
 	line-height: 1.17;
 	text-align: center;
 }
 
+.members-content {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
 .members-name {
+	margin-bottom: 10px;
+
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.19;
@@ -230,11 +301,22 @@ img {
 
 /* ------------Футер------------*/
 .footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+
 	background-color: var(--second-background-color);
 }
 
 .footer-logo {
 	color: var(--just-white-color);
+}
+
+.footer .logo {
+	margin-bottom: 20px;
+}
+
+.footer-item:not(:last-child) {
+	margin-bottom: 9px;
 }
 
 .footer-link {
@@ -250,7 +332,16 @@ img {
 
 /* -------------Мейн Портфолио------------- */
 /* Фильтр */
+.filter-list {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
 .filter-button {
+	padding: 6px 22px;
+	border-radius: 4px;
+
 	font-family: inherit;
 	font-weight: 500;
 	font-size: 16px;
@@ -261,6 +352,10 @@ img {
 	background-color: var(--button-first-bg-color);
 }
 
+.filter-item:not(:last-child) {
+	margin-right: 8px;
+}
+
 .current-filter-button,
 .filter-button:hover,
 .filter-button:focus {
@@ -269,7 +364,28 @@ img {
 }
 
 /* Примеры работ */
+.work-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: -30px;
+	margin-left: -30px;
+}
+
+.work-item {
+	flex-basis: calc(100% / 3 - 30px);
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+.work-item-content {
+	padding: 20px 24px;
+	border: 1px solid #eee;
+	border-top: none;
+}
+
 .work-name {
+	margin-bottom: 4px;
+
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 2;
